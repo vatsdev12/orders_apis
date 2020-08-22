@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Tax Credible</title>
+<link rel="icon" href="/public/img/favicon.png" type="image/png" sizes="64x64">
+<link rel="stylesheet" href="/public/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('#resetForm').validate({
+rules: {
+newPassword: {
+required: true,
+minlength: 5
+},
+re_enter_new_password: {
+required: true,
+minlength: 5,
+equalTo: "#newPassword"
+}
+},
+messages: {
+"newPassword": {
+required: "Please enter new password",
+minlength: "Password should have minimum 5 characters"
+},
+"re_enter_new_password": {
+required: "Re-enter password field can't be empty",
+equalTo: "Password mismatch. Please verify."
+},
+}
+});
+});
+</script>
+
+
+</head>
+<body>
+<div class="container bg-container">
+<div class="inner-container">
+<div class="brand">
+<img src="/public/img/logo.svg" />
+</div>
+
+<h2>Reset Your Password</h2>
+
+<form action="" method="post" id="resetForm">
+<input type="hidden" name="accessToken" value="<%= token %>"/>
+<div class="input-wrap">
+
+<input type="password" name="newPassword" id="newPassword" placeholder="New password"/>
+</div>
+<div class="input-wrap">
+<input type="password" name="re_enter_new_password" id="re_enter_new_password" placeholder="Re-enter new password"/>
+</div>
+
+<button type="submit">RESET</button>
+</form>
+</div>
+
+<div class="copyright">
+<p>© 2018-2019 Tax Credible, All Rights Reserved.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "err_sending_otp": {
+    "message": "Unable to send verification code. Please try after some time.",
+    "status_code": 7
+  },
+  "err_resending_otp": {
+    "message": "Unable to resend verification code. Please try after some time.",
+    "status_code": 8
+  },
+  "otp_success": {
+    "message": "Verification code send sucessfully."
+  },
+  "err_matching_otp": {
+    "message": "Unable to verify verification code. Please try after some time.",
+    "status_code": 9
+  },
+  "otp_verified": {
+    "message": "Verification code verified sucessfully."
+  },
+  "phone_token_mismatch": {
+    "status_code": 6,
+    "message": "Invalid token. Please again verify your verification code and then proceed."
+  }
+}
